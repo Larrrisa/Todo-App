@@ -1,0 +1,290 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  background-image: url(/images/bg-desktop-dark.jpg);
+  background-color: hsl(235, 21%, 11%);
+  background-repeat: no-repeat;
+  background-size: 100vw 60vh;
+  font-size: 10px;
+  display: flex;
+}
+
+section {
+  margin: 8rem auto;
+  width: 40vw;
+  align-items: center;
+}
+
+header {
+  margin-bottom: 3rem;
+  display: flex;
+  gap: 75%;
+  /* justify-content: space-between;  why doesn't work*/
+}
+
+h1 {
+  text-transform: uppercase;
+  color: hsl(0, 0%, 98%);
+  /* display: flex; */
+  align-items: center;
+  font-size: 2rem;
+}
+
+.icon {
+  background-image: url(/images/icon-sun.svg);
+  width: 100%;
+  background-repeat: no-repeat;
+}
+
+.form-input {
+  position: relative;
+}
+
+input {
+  width: 100%;
+  height: 5rem;
+  background-color: hsl(237, 14%, 26%);
+  border-radius: 0.5rem;
+  border: solid 0;
+  margin-bottom: 1.5rem;
+  color: hsl(0, 0%, 98%);
+  font-size: 1.4rem;
+  font-family: "Josefin Sans", sans-serif;
+  padding-left: 4rem;
+}
+
+::placeholder {
+  color: hsl(234, 11%, 52%);
+  font-size: 1.4rem;
+  font-family: "Josefin Sans", sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/*это стиль чекбокса*/
+.checkbox {
+  position: absolute;
+  top: 1.4rem;
+  left: 1.4rem;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  border: 1px solid hsl(234, 11%, 52%);
+}
+
+.marked {
+  text-decoration: line-through;
+  text-decoration-color: hsl(234, 39%, 85%);
+}
+
+.todo-item {
+  position: relative;
+  height: 5rem;
+  background-color: hsl(237, 14%, 26%);
+  border-radius: 5px;
+  border: solid 0;
+  border-radius: 0;
+  margin: 0;
+  border-bottom: solid 1px hsl(234, 11%, 52%);
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+}
+
+.todo-item:first-child {
+  border-radius: 5px 5px 0 0;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.todo-item:hover {
+  cursor: pointer;
+}
+
+button {
+  background-color: hsl(237, 14%, 26%);
+  border: 0;
+  padding-right: 1rem;
+}
+
+p {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: hsl(234, 39%, 85%);
+}
+
+.item-description {
+  justify-content: center;
+  font-size: 1.4rem;
+  padding-left: 4rem;
+  font-weight: 400;
+  color: hsl(234, 39%, 85%);
+}
+
+footer {
+  background-color: hsl(237, 14%, 26%);
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+  color: hsl(233, 11%, 84%);
+  height: 3rem;
+  align-items: center;
+  margin-bottom: 2rem;
+  border-radius: 0 0 5px 5px;
+  padding-left: 1.4rem;
+  padding-right: 1rem;
+}
+
+.filter {
+  display: flex;
+  /* justify-content: space-between; */
+  gap: 0.5rem;
+}
+
+.filter > p {
+  font-size: 1rem;
+}
+.filter > p:hover {
+  cursor: pointer;
+  font-weight: 600;
+  color: hsl(0, 0%, 100%);
+}
+
+.clear:hover {
+  cursor: pointer;
+  font-weight: 600;
+  color: hsl(0, 0%, 100%);
+}
+
+.drag-drop > p {
+  display: flex;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+.chosen-filter {
+  color: hsl(220, 98%, 61%);
+}
+
+/*LIGHT THEME*/
+
+.light {
+  background-image: url(/images/bg-desktop-light.jpg);
+  background-color: hsl(233, 11%, 84%);
+  background-repeat: no-repeat;
+}
+
+.light input {
+  background-color: hsl(0, 0%, 98%);
+  color: hsl(235, 21%, 11%);
+}
+
+.light ::placeholder {
+  color: hsl(235, 19%, 35%);
+}
+
+.light .item-description {
+  color: hsl(235, 21%, 11%);
+}
+.light h1 {
+  color: hsl(235, 21%, 11%);
+}
+
+.light .todo-item {
+  background-color: hsl(0, 0%, 98%);
+}
+
+.light button {
+  background-color: hsl(0, 0%, 98%);
+}
+
+.light footer {
+  color: hsl(235, 21%, 11%);
+  background-color: hsl(0, 0%, 98%);
+}
+
+.light p {
+  color: hsl(235, 21%, 11%);
+}
+
+.light .filter > p:hover {
+  color: hsl(233, 14%, 35%);
+}
+
+.light .clear:hover {
+  color: hsl(233, 14%, 35%);
+}
+
+.light .chosen-filter {
+  color: hsl(220, 98%, 61%);
+}
+
+.light .drag-drop > p {
+  color: hsl(235, 21%, 11%);
+}
+
+.light .icon {
+  background-image: url(/images/icon-moon.svg);
+}
+
+.selected {
+  opacity: 0.6;
+}
+
+.light .marked {
+  text-decoration: line-through;
+  text-decoration-color: hsl(235, 21%, 11%);
+}
+
+@media (max-width: 37.5rem) {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background-size: 100vw 40vh;
+  }
+
+  section {
+    width: 80vw;
+  }
+
+  header {
+    margin-bottom: 3rem;
+    display: flex;
+    gap: 57%;
+  }
+
+  footer {
+    background-color: hsl(237, 14%, 26%);
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+    color: hsl(233, 11%, 84%);
+    height: 4rem;
+    align-items: center;
+    margin-bottom: 2rem;
+    border-radius: 0 0 5px 5px;
+    padding-left: 1.4rem;
+    padding-right: 0.5rem;
+  }
+
+  .filter {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    gap: 0.1rem;
+  }
+}
